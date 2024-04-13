@@ -6,7 +6,6 @@ import DropDown from '../DropDown';
 import Button from '../Button';
 
 const FormRegister = (props) => {
-
     const [name, setName] = useState('');
     const [role, setRole] = useState('');
     const [image, setImage] = useState('');
@@ -20,6 +19,10 @@ const FormRegister = (props) => {
             image,
             team,
         });
+        setName('');
+        setRole('');
+        setImage('');
+        setTeam('');
     };
 
     return (

@@ -50,7 +50,7 @@ function App() {
             <Banner />
             <FormRegister teams={teamsNames} createNewWorker={(worker) => createWorker(worker)} />
             {teams.map((team) => (
-                <Team key={team.name} name={team.name} primaryColor={team.primaryColor} secondaryColor={team.secondaryColor}/>
+                <Team key={team.name} name={team.name} primaryColor={team.primaryColor} secondaryColor={team.secondaryColor} collaborators={workers.filter(collaborator => collaborator.team === team.name)}/>
             ))}
         </>
     );
